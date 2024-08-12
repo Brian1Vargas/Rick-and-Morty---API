@@ -1,0 +1,98 @@
+:root {
+  --color1: #02afc5; /* Azul */
+  --color2: #35c9dd; /* Azul claro */
+  --color3: #87d1db; /* Azul verdoso */
+  --color4: #a9f3fd; /* Azul claro cielo */
+  --color5: #4cb5c3; /* Azul verdoso más oscuro */
+}
+
+h1 {
+  text-align: center;
+  color: #00ff00;
+  margin-bottom: 5px;
+}
+
+.main {
+  background-color: #333333;
+  padding: 20px;
+
+}
+
+.episodios-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Roboto, sans-serif;
+  
+}
+
+.episodios-list {
+  display: grid;
+  gap: 20px;
+  
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste automático de columnas */
+}
+
+.episodio {
+  color: white;
+  background-color: #333333;
+  border: 2px solid #00ff00;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido fluya verticalmente */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  min-height: 220px;
+ 
+}
+
+
+.episodio:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.episodio-details {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  overflow: hidden; /* Oculta el texto que sobresale */
+}
+
+.episodio h2 {
+  color: var(--color3); /* Color de texto */
+  margin-bottom: 10px;
+}
+
+.episodio p {
+  margin-bottom: 5px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  text-overflow: ellipsis; /* Mostrar puntos suspensivos si el texto es largo */
+   /* Evitar que el texto se divida */
+}
+
+.episodio strong {
+  font-weight: bold;
+}
+
+.ver-mas-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.ver-mas-button:hover {
+  background-color: #0056b3;
+}
+
+.botonClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

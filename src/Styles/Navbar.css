@@ -1,0 +1,137 @@
+/* Navbar */
+.navbar {
+  background-color: #2ecc40; /* Fondo verde neón */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  font-weight:600;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif; 
+}
+
+
+
+
+.navbar-links a {
+  color: rgb(12, 77, 24); /* Color del texto inicial */
+  transition: color 0.3s ease; /* Transición suave del color */
+}
+
+
+
+
+
+/* Imagen de la izquierda */
+.juntos2 {
+  height: 70px;
+  width: 250px; 
+  transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+.juntos2:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+/* Estilo para el texto "Rick & Morty" */
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+.navbar-brand:hover {
+  color: #f0db4f; /* Cambio de color al pasar el mouse */
+}
+
+
+
+/* Estilo para los enlaces */
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-link {
+  margin-right: 20px;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s ease; /* Transición suave para el color del enlace */
+}
+
+.navbar-link a:hover {
+  color: white; /* Cambio de color al pasar el mouse */
+}
+
+.navbar-link a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black; /* Línea inferior en color amarillo */
+  transition: width 0.3s ease; /* Transición suave para la línea */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.navbar-link a:hover::after {
+  width: 100%; /* Línea se expande al pasar el mouse */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .juntos2 {
+    width: 350px;
+  }
+
+  .navbar-links {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-link {
+    margin: 10px 0;
+  }
+
+  .navbar-link a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .juntos2 {
+    width: 250px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-link a {
+    font-size: 1rem;
+  }
+}
